@@ -10,7 +10,10 @@ module reachedBond(
   genvar i;
   generate 
     for (i = 0; i < 144; i = i + 1) begin: for2
-		assign leftBond[i] = (currentSqs[i] == 1'b1 && (i % 12 == 0 || backGround[i - 1] == 1'b1)) ? 1'b1 : 1'b0;
+		if (i % 12 == 0)
+			assign leftBond[i] = currentSqs[i];
+		else
+			assign leftBond[i] = currentSqs[i] && backGround[i - 1];
     end
   endgenerate
   
@@ -19,7 +22,10 @@ module reachedBond(
   genvar j;
   generate 
     for (j = 0; j < 144; j = j + 1) begin: for3
-		assign rightBond[j] = (currentSqs[j] == 1'b1 && (j % 12 == 11 || backGround[j + 1] == 1'b1)) ? 1'b1 : 1'b0;
+		if (j % 12 == 11)
+			assign rightBond[j] = currentSqs[j];
+		else
+			assign rightBond[j] = currentSqs[j] && backGround[j + 1];
     end
   endgenerate
   

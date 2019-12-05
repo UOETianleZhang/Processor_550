@@ -16,14 +16,30 @@ assign movingSquares = squareIdx;
 reg [144:0]  background = 145'd5411;
 reg [144:0]  squareIdx = 145'h20070;
 
+//module reachedBond(
+//	input clk,
+//	input [144:0] backGround,
+//	input [144:0] currentSqs,
+//	output hasReachedLeft, hasReachedRight
+//);
+reachedBond reachedBond1(clk, background_out, movingSquares, leftBound, rightBound);
+
+//module reachedBottom(
+//	input clk,
+//	input [144:0] backGround,
+//	input [144:0] currentSqs,
+//	output hasReachedBottom
+//);
+
+reachedBottom reachedBottom1(clk, background_out, movingSquares, downBound);
 
 wire leftBound;
 wire rightBound;
 wire downBound;
 
-assign leftBound = 0;
-assign rightBound = 0;
-assign downBound = 0;
+//assign leftBound = 0;
+//assign rightBound = 0;
+//assign downBound = 0;
 
 wire clk_2Hz;
 //module counter(

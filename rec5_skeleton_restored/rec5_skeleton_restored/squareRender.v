@@ -42,7 +42,7 @@ module squareRender (
 
 wire [144:0] initialSquare;
 wire [144:0] initialBackground;
-assign initialSquare = 145'h20070;
+assign initialSquare = 145'h20038;
 assign initialBackground = 145'b00001111000000000010;
 //curSquares getPos1(clk, 1'b0, 1'b0, 1'b0, 1'b0, initialSquare, initialBackground, background, movingSquares);
 curSquares getPos1(clk, left, right, up, down, initialSquare, initialBackground, background, movingSquares);

@@ -1,18 +1,21 @@
 module reachedBottom(
 	input clk,
-	input [144:0] backGround,
-	input [144:0] currentSqs,
+	input [143:0] backGround,
+	input [143:0] currentSqs,
 	output hasReachedBottom
 );
 
-  wire [144:0] signals;
+  wire [143:0] signals;
   genvar i;
   generate 
     for (i = 0; i < 144; i = i + 1) begin: for2
-		assign signals[i] = (currentSqs[i] == 1'b1 && (i / 12 == 11 || backGround[i + 12] == 1'b1)) ? 1'b1 : 1'b0;
+		if (i + 12 >= 144) 
+			assign signals[i] = currentSqs[i];
+		else
+			assign signals[i] = currentSqs[i] && backGround[i + 12];
     end
   endgenerate
   
-  assign hasReachedBottom = signals > 145'b0 ? 1'b1 : 1'b0;
+  assign hasReachedBottom = signals > 145'b0;
 
 endmodule
