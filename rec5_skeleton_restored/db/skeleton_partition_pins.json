@@ -226,18 +226,6 @@
 				{
 					"name" : "sw_left",
 					"strict" : false
-				},
-				{
-					"name" : "sw_up",
-					"strict" : false
-				},
-				{
-					"name" : "sw_right",
-					"strict" : false
-				},
-				{
-					"name" : "sw_down",
-					"strict" : false
 				}
 			]
 		}

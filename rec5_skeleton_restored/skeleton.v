@@ -63,11 +63,12 @@ module skeleton(resetn,
 	
 	/**converter***/
 	wire [7:0] tmp;
-	converter myConverter(ps2_out, tmp);
+	wire left, right, up, down;
+	converter myConverter(ps2_out, tmp, left, right, up, down);
 	
 	
 	// lcd controller
-	lcd mylcd(clock, ~resetn, 1'b1, tmp, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
+	lcd mylcd(clock, ~resetn, 1'b1, ps2_out, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
 	
 	// example for sending ps2 data to the first two seven segment displays
 	Hexadecimal_To_Seven_Segment hex1(ps2_out[3:0], seg1);
@@ -95,10 +96,14 @@ module skeleton(resetn,
 //								 .dataIn(ps2_out),
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
-								 .left(sw_left), 
-								 .right(sw_right),
-								 .up(sw_up),
-								 .down(sw_down),
+								 .left(~sw_left), 
+//								 .right(sw_right),
+//								 .up(sw_up),
+//								 .down(sw_down),
+//								 .left(left), 
+								 .right(right),
+								 .up(up),
+								 .down(down),
 								 .r_data(VGA_R));
 	
 	

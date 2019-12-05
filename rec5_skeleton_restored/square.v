@@ -17,7 +17,7 @@ module square (
  reg [9:0] y = 100;
  
  parameter [9:0] w = 20;
- parameter [9:0] h = 40;
+ parameter [9:0] h = 20;
  parameter [7:0] colorIndex = 8'haa;
  
  assign i = address / 640;
@@ -56,15 +56,15 @@ module square (
 // 
  reg [220:0] counter = 0;
  always@(posedge clk) begin
- if (~left|| ~right|| ~up || ~down) begin
+ if (left|| right|| up || down) begin
 	if (counter == 0) begin
-	  if (~left) //left
+	  if (left) //left
 		y = y - 1;
-	  else if (~right)
+	  else if (right)
 		y = y + 1;
-	  else if (~up)
+	  else if (up)
 		x = x - 1;
-	  else if (~down)
+	  else if (down)
 		x = x + 1;
 	  counter = counter + 1;
 	end
