@@ -64,7 +64,7 @@ module skeleton(resetn,
 	/**converter***/
 	wire [7:0] tmp;
 	wire left, right, up, down;
-	converter myConverter(CLOCK_50, ps2_out, tmp, left, right, up, down);
+	converter myConverter(CLOCK_50, ps2_key_data, ps2_key_pressed, tmp, left, right, up, down);
 	
 	
 	// lcd controller

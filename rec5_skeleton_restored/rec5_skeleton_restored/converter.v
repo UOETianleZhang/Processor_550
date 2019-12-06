@@ -1,6 +1,7 @@
 module converter(
 	input clk,
 	input [7:0] dataIn,
+	input ps2_key_pressed_in,
 	output [7:0] dataOut,
     output reg left,
     output reg right,
@@ -8,40 +9,60 @@ module converter(
     output reg down
 );
 
+	reg ps2_key_pressed = 1'b0;
+//	reg [30:0] ps2Counter = 0;
+	
+//	always @ (posedge clk) begin
+//		if (ps2Counter == 25'd2500000) begin
+//			ps2_key_pressed = ps2_key_pressed_in;
+//				
+//		end
+//		else begin
+//		
+//		
+//		end
+//	end
+
 	  // This always block is executed whenever a, b, c or sel changes in value
     reg [7:0] data;
-    always @ (clk) begin     
-//		case(dataIn)
-//			8'h1D    : data = 8'd87;     // If sel=0, output is a
-//			8'h1B    : data = 8'd83;
-//			8'h1C    : data = 8'd65;
-//			8'h23    : data = 8'd68;
-//			default  : data = dataIn;     // If sel is anything else, out is always 0
-//		endcase
-
-		if (dataIn == 8'h75)
-		  up = 1;
-		else 
-		  up = 0;
-		if (dataIn == 8'h74)
-		  right = 1;
-		else 
-		  right = 0;
-		if (dataIn == 8'h6B)
-		  left = 1;
-		else 
-		  left = 0;
-		if (dataIn == 8'h72)
-		  down = 1;
-		else 
-		  down = 0;
+	 reg [24:0] counter = 0;
+	 reg nextUp = 1'b0, nextRight = 1'b0, nextDown = 1'b0, nextLeft = 1'b0;
+    always @ (posedge clk) begin
+		if (ps2_key_pressed_in) begin
+			ps2_key_pressed = 1'b1;
+		end
+		
+		if (counter == 25'd5000000) begin
+			counter = 0;
+			up = nextUp;
+			right = nextRight;
+			left = nextLeft;
+			down = nextDown;
+			
+			nextUp = 1'b0;
+			nextRight = 1'b0;
+			nextLeft = 1'b0;
+			nextDown = 1'b0;
+		end
+		else begin
+			up = 1'b0;
+			right = 1'b0;
+			left = 1'b0;
+			down = 1'b0;
+			
+			counter = counter + 1;
+			if (ps2_key_pressed) begin
+				nextUp	 	= dataIn == 8'h75 ? 1'b1 : nextUp;
+				nextRight 	= dataIn == 8'h74 ? 1'b1 : nextRight;
+				nextLeft 	= dataIn == 8'h6B ? 1'b1 : nextLeft;
+				nextDown		= dataIn == 8'h72 ? 1'b1 : nextDown;
+				ps2_key_pressed = ps2_key_pressed_in;
+			end
+		end
 
   end
   
   assign dataOut = dataIn;
-//  assign up = dataIn == 8'h75 ? 1 : 0;
-//  assign right = dataIn == 8'h74 ? 1 : 0;
-//  assign down = dataIn == 8'h75 ? 1 : 0;
-//  assign left = dataIn == 8'h6B ? 1 : 0;
+
 
 endmodule

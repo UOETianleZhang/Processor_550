@@ -60,18 +60,33 @@ img_data	img_data_inst (
 //////Add switch-input logic here
 
 //module square (
-//	 input	[18:0]  address,
-//	 input clk,
-//	 input reset,
-//	 input [7:0] keyB;
-//	 input	[7:0]  qin,
-//	 output	[7:0]  qout
+//  input [18:0]  address,
+//  input clk,
+//  input reset,
+//  input [7:0] keyB;
+//  input [7:0]  qin,
+//  output [7:0]  qout
 //);
 wire [7:0] qout;
+wire [7:0] qout1;
+wire [7:0] qout2;
+wire [9:0] score;
+assign score = 10'd666;
 //square square1(ADDR, VGA_CLK_n, index, qout, left, right, up, down);
 
 //zhuyi!!!!!
-squareRender render1(ADDR, index, VGA_CLK_n, left, right, up, down, qout);
+squareRender render1(ADDR, index, VGA_CLK_n, left, right, up, down, qout1);
+
+//module printScore(
+// input clk,
+// input [18:0]  address,
+//   input [7:0]  qin,
+// input [9:0] score,
+// output reg [7:0] qout
+//);
+printScore render2(VGA_CLK_n, ADDR,  index, score, qout2);
+
+assign qout = ADDR % 640 < 480 ? qout1 : qout2;
 
 //////Color table output
 img_index	img_index_inst (

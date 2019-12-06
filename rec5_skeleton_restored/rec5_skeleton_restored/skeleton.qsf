@@ -204,4 +204,10 @@ set_global_assignment -name VERILOG_FILE initializer.v
 set_global_assignment -name VERILOG_FILE curSquares.v
 set_global_assignment -name VERILOG_FILE squareRender.v
 set_global_assignment -name VERILOG_FILE counter.v
+set_global_assignment -name VERILOG_FILE gameFial.v
+set_global_assignment -name VERILOG_FILE rotated.v
+set_global_assignment -name VERILOG_FILE printScore.v
+set_global_assignment -name VERILOG_FILE curScore.v
+set_global_assignment -name VERILOG_FILE setScore.v
+set_global_assignment -name VERILOG_FILE Random_3.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

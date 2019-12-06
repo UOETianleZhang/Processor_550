@@ -7,7 +7,8 @@ reg clk_out = 1'b0;
 reg [24:0] count = 25'b0;
 
  always@(posedge clk) begin
-	if (count == 25'd10000000) begin
+	if (count == 25'd2500000) begin
+	// d10000000 2Hz
 		clk_out = 1'b1;
 		count = 0;
 	end

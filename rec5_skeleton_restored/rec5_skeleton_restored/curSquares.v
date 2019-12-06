@@ -1,14 +1,15 @@
 module curSquares (
   input clk,
-  input left,
-  input right,
-  input up,
-  input down,
+  input leftSignal,
+  input rightSignal,
+  input upSignal,
+  input downSignal,
   input [144:0] initialSquare,
   input [144:0] initialBack,
   output [144:0] background_out,
   output [144:0]  movingSquares
 );
+
 
 assign background_out = background;
 assign movingSquares = squareIdx;
@@ -48,11 +49,19 @@ wire clk_2Hz;
 //);
 counter myCounter2Hz(clk, clk_2Hz);
 
+  wire left, right, up, down;
+  assign left = leftSignal;
+  assign right = rightSignal;
+  assign up = upSignal;
+  assign down = downSignal;
+//always@(posedge leftSignal) begin
+//	left
+//end
 
  genvar i;
  generate 
  for (i = 0; i <= 144; i = i + 1) begin: for1
- always@(posedge clk_2Hz) begin
+ always@(posedge clk) begin
    if(downBound)begin
     background[i] = squareIdx[i] ? 1'b1 : background[i];
     squareIdx[i] = initialSquare[i];
