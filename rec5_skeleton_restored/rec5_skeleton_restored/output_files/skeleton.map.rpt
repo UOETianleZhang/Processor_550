@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Sat Dec 07 10:15:59 2019
+Sat Dec 07 10:40:05 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -98,7 +98,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 07 10:15:59 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 07 10:40:05 2019       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
@@ -569,8 +569,9 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                         ; Reason for Removal        ; Registers Removed due to This Register                                                                                             ;
 +---------------------------------------------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------+
-; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA          ; Stuck at GND              ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT,  ;
-;                                                                                                                                       ; due to stuck port data_in ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT,    ;
+; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_3_TRANSMIT_DATA          ; Stuck at GND              ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[2],                                       ;
+;                                                                                                                                       ; due to stuck port data_in ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_4_TRANSMIT_STOP_BIT,  ;
+;                                                                                                                                       ;                           ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_5_RECEIVE_ACK_BIT,    ;
 ;                                                                                                                                       ;                           ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[5],                              ;
 ;                                                                                                                                       ;                           ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[6],                              ;
 ;                                                                                                                                       ;                           ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[7],                              ;
@@ -707,12 +708,6 @@ Encoding Type:  One-Hot
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[5]        ; 9       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[6]        ; 9       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[4]        ; 9       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[5]       ; 4       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[1]       ; 4       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[10]      ; 4       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[8]       ; 4       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[0]       ; 3       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background[12]      ; 4       ;
 ; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[17]            ; 1       ;
 ; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[4]             ; 1       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background_next[10] ; 2       ;
@@ -721,51 +716,51 @@ Encoding Type:  One-Hot
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background_next[1]  ; 2       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background_next[0]  ; 2       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|background_next[12] ; 12      ;
-; Total number of inverted registers = 50                                            ;         ;
+; Total number of inverted registers = 44                                            ;         ;
 +------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[5]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|last_data_received[3]                                                                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[0]                   ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[15][6]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[14][7]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[13][7]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[12][3]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[11][7]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[10][0]                                                                                       ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[9][2]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[8][2]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[7][6]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[6][6]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[5][6]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[4][0]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[3][6]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[2][0]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[1][6]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[0][6]                                                                                        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|lcd:mylcd|ptr[2]                                                                                             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |skeleton|lcd:mylcd|mstart                                                                                             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |skeleton|lcd:mylcd|index[2]                                                                                           ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[18]                                      ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[10]        ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[8] ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[20]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[3]                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[3]                                  ;
-; 5:1                ; 127 bits  ; 381 LEs       ; 254 LEs              ; 127 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[139]                                ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[16]                                 ;
-; 38:1               ; 8 bits    ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; Yes        ; |skeleton|lcd:mylcd|lcd_data[7]                                                                                        ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[17]                                      ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[6]                                  ;
-; 145:1              ; 2 bits    ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|Mux1                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[1]                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|last_data_received[1]                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[7]                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[15][3]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[14][1]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[13][6]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[12][6]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[11][0]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[10][4]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[9][4]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[8][4]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[7][6]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[6][0]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[5][1]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[4][3]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[3][6]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[2][6]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[1][0]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[0][4]                                                                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|lcd:mylcd|ptr[3]                                                                                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |skeleton|lcd:mylcd|mstart                                                                                              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |skeleton|lcd:mylcd|index[0]                                                                                            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[29]                                       ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[3]          ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[11] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[4]           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[2]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[0]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[1]                                   ;
+; 5:1                ; 127 bits  ; 381 LEs       ; 254 LEs              ; 127 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[30]                                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[16]                                  ;
+; 38:1               ; 8 bits    ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; Yes        ; |skeleton|lcd:mylcd|lcd_data[7]                                                                                         ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[17]                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[6]                                   ;
+; 145:1              ; 2 bits    ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|Mux1                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -2193,15 +2188,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1" ;
-+----------------------+-------+----------+--------------------------------------------------+
-; Port                 ; Type  ; Severity ; Details                                          ;
-+----------------------+-------+----------+--------------------------------------------------+
-; initialBack[15..12]  ; Input ; Info     ; Stuck at VCC                                     ;
-; initialBack[144..16] ; Input ; Info     ; Stuck at GND                                     ;
-; initialBack[11..2]   ; Input ; Info     ; Stuck at GND                                     ;
-; initialBack[1]       ; Input ; Info     ; Stuck at VCC                                     ;
-; initialBack[0]       ; Input ; Info     ; Stuck at GND                                     ;
-+----------------------+-------+----------+--------------------------------------------------+
++-------------+-------+----------+-----------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                   ;
++-------------+-------+----------+-----------------------------------------------------------+
+; initialBack ; Input ; Info     ; Stuck at GND                                              ;
++-------------+-------+----------+-----------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2396,7 +2387,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:19     ;
+; Top            ; 00:00:18     ;
 +----------------+--------------+
 
 
@@ -2406,7 +2397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Dec 07 10:15:12 2019
+    Info: Processing started: Sat Dec 07 10:39:22 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -3015,9 +3006,9 @@ Info (21057): Implemented 4023 device resources after synthesis - the final reso
     Info (21064): Implemented 328 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 200 warnings
-    Info: Peak virtual memory: 5123 megabytes
-    Info: Processing ended: Sat Dec 07 10:16:00 2019
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:53
+    Info: Peak virtual memory: 5119 megabytes
+    Info: Processing ended: Sat Dec 07 10:40:05 2019
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:49
 
 
