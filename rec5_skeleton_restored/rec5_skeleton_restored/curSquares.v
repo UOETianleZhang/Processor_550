@@ -14,7 +14,7 @@ module curSquares (
 assign background_out = background;
 assign movingSquares = squareIdx;
 
-reg [144:0]  background = 145'd5411;
+reg [144:0]  background = 145'd0;
 reg [144:0]  squareIdx = 145'h20070;
 
 //module reachedBond(
@@ -58,64 +58,74 @@ counter myCounter2Hz(clk, clk_2Hz);
 //	left
 //end
 
- genvar i;
- generate 
- for (i = 0; i <= 144; i = i + 1) begin: for1
- always@(posedge clk) begin
-   if(downBound)begin
-    background[i] = squareIdx[i] ? 1'b1 : background[i];
-    squareIdx[i] = initialSquare[i];
-   end
- 
-   else begin
-    if(left && ~leftBound) begin
-        squareIdx[i] = i < 144 ? squareIdx[i + 1] : 1'b0;
-  //squareIdx[i + 1] = 1'b0;
-  end
-    else if(right && ~rightBound) begin
-      squareIdx[i] = i > 0 ? squareIdx[i - 1] : 1'b0;
-  //squareIdx[i - 1] = 1'b0;
-  end
-    else if(down && ~downBound) begin
-      squareIdx[i] = i >= 12 ? squareIdx[i - 12] : 1'b0;
-  //squareIdx[i - 12] = 1'b0;
-    end
-    else begin
-        squareIdx[i] = squareIdx[i];
-    end
-   end
- 
- end
- end
- endgenerate
+genvar i;
+generate 
+for (i = 0; i <= 144; i = i + 1) begin: for1
+    always@(posedge clk) begin
+        if(downBound)begin
+            background_next[i] = squareIdx[i] ? 1'b1 : background[i];
+            squareIdx[i] = initialSquare[i];
+        end
+        
+        else begin
+            if(left && ~leftBound) begin
+                squareIdx[i] = i < 144 ? squareIdx[i + 1] : 1'b0;
+        end
+            else if(right && ~rightBound) begin
+            squareIdx[i] = i > 0 ? squareIdx[i - 1] : 1'b0;
+        end
+            else if(down && ~downBound) begin
+            squareIdx[i] = i >= 12 ? squareIdx[i - 12] : 1'b0;
+            end
+            else begin
+                squareIdx[i] = squareIdx[i];
+            end
+        end
 
+    end
+end
+endgenerate
 
-//  genvar i;
-//  generate 
-//  for (i = 0; i < 144; i = i + 1) begin: for1
-//  always@(posedge clk) begin
-//   if(downBound == 1'b1)begin
-//    //background[i] = background[i] || squareIdx[i];
-//    if(squareIdx[i] == 1'b1)begin
-//     background[i] = 1'b1;
-//    end
-//    squareIdx[i] = initialSquare[i];
-//   end
-//   else begin
-//    if(left && leftBound == 1'b0 && squareIdx[i + 1] == 1)
-//     squareIdx[i] = 1'b1;
-//    else if(i > 0 && right && rightBound == 1'b0) begin
-//     if(squareIdx[i - 1] == 1)
-//      squareIdx[i] = 1'b1;
-//    end
-//    else if(i >= 12 && down && downBound == 1'b0) begin
-//     if(squareIdx[i - 12] == 1)
-//      squareIdx[i] = 1'b1;
-//    end
-//   end
-//  end
-//  end
-//  endgenerate
+reg [144:0]  background_next = 145'd5411;
+always@(posedge clk) begin
+    background = background_next;
+    if (background[11:0] == 12'hFFF) begin
+        background[11:0] = 12'h000;
+    end
+    if (background[23:12] == 12'hFFF) begin
+    background[23:0] = {background[11:0],12'h000};
+    end
+    if (background[35:24] == 12'hFFF) begin
+    background[35:0] = {background[23:0],12'h000};
+    end
+    if (background[47:36] == 12'hFFF) begin
+    background[47:0] = {background[35:0],12'h000};
+    end
+    if (background[59:48] == 12'hFFF) begin
+    background[59:0] = {background[47:0],12'h000};
+    end
+    if (background[71:60] == 12'hFFF) begin
+    background[71:0] = {background[59:0],12'h000};
+    end
+    if (background[83:72] == 12'hFFF) begin
+    background[83:0] = {background[71:0],12'h000};
+    end
+    if (background[95:84] == 12'hFFF) begin
+    background[95:0] = {background[83:0],12'h000};
+    end
+    if (background[107:96] == 12'hFFF) begin
+    background[107:0] = {background[95:0],12'h000};
+    end
+    if (background[119:108] == 12'hFFF) begin
+    background[119:0] = {background[107:0],12'h000};
+    end
+    if (background[131:120] == 12'hFFF) begin
+    background[131:0] = {background[119:0],12'h000};
+    end
+    if (background[143:132] == 12'hFFF) begin
+    background[143:0] = {background[131:0],12'h000};
+    end
+end
 
 
 endmodule

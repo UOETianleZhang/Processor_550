@@ -1,9 +1,14 @@
 module rotated(
+	input [9:0] ADDR,
 	input [143:0] backGround,
 	input [143:0] currentSqs,
 	output [143:0] newSqs
 );
-
+	
+	wire [3:0] rx;
+	wire [3:0] ry;
+	assign rx = ADDR / 12;
+	assign ry = ADDR % 12;
 
 ////  wire [143:0] signals;
 //  genvar i;

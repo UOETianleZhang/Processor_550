@@ -52,7 +52,7 @@ wire refresh;
 
 reachedBottom reachedBottom2(clk, background, movingSquares, refresh);
 initializer init1(clk, refresh, initialSquare);
-assign initialBackground = 145'b00001111000000000010;
+assign initialBackground = 145'b0;
 //curSquares getPos1(clk, 1'b0, 1'b0, 1'b0, 1'b0, initialSquare, initialBackground, background, movingSquares);
 curSquares getPos1(clk, left, right, up, down, initialSquare, initialBackground, background, movingSquares);
 
