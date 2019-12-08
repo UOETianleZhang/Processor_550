@@ -4,8 +4,8 @@ module initializer(
  output [144:0] newShape
 );
 
-parameter [144:0] box = 145'h060060;
-parameter [144:0] Ishape = 145'h020020020020;
+parameter [144:0] box = 145'h070050;
+parameter [144:0] Ishape = 145'h0000F0;
 parameter [144:0] Tshape = 145'h020070;
 parameter [144:0] Lshape = 145'h010070;
 parameter [144:0] Zshape = 145'h030060;

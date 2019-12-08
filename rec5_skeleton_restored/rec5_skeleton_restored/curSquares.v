@@ -58,6 +58,42 @@ counter myCounter2Hz(clk, clk_2Hz);
 //	left
 //end
 
+//module rotated(
+//	input up,
+//	input [9:0] centralPoint,
+//	input [143:0] backGround,
+//	input [143:0] currentSqs,
+//	output [143:0] newSqs,
+//	output canRotate
+//);
+
+wire [144:0] newSqs;
+wire canRotate;
+reg [9:0] centralPoint = 10'd5;
+rotated myRo(clk, centralPoint, background_out, squareIdx, newSqs, canRotate);
+
+ always@(posedge clk) begin
+	  if(downBound)begin
+			centralPoint = 10'd5;
+	  end
+	  
+	  else begin
+		if(left && ~leftBound) begin
+			centralPoint = centralPoint - 1;
+	  end
+			else if(right && ~rightBound) begin
+			centralPoint = centralPoint + 1;
+	  end
+			else if(down && ~downBound) begin
+			centralPoint = centralPoint + 12;
+			end
+			else begin
+				 centralPoint = centralPoint;
+			end
+	  end
+
+ end
+
 genvar i;
 generate 
 for (i = 0; i <= 144; i = i + 1) begin: for1
@@ -68,7 +104,10 @@ for (i = 0; i <= 144; i = i + 1) begin: for1
         end
         
         else begin
-            if(left && ~leftBound) begin
+			if(up && canRotate) begin
+				squareIdx[i] = newSqs[i];
+			end
+            else if(left && ~leftBound) begin
                 squareIdx[i] = i < 144 ? squareIdx[i + 1] : 1'b0;
         end
             else if(right && ~rightBound) begin
@@ -86,7 +125,7 @@ for (i = 0; i <= 144; i = i + 1) begin: for1
 end
 endgenerate
 
-reg [144:0]  background_next = 145'd5411;
+reg [144:0]  background_next = 145'd0;
 always@(posedge clk) begin
     background = background_next;
     if (background[11:0] == 12'hFFF) begin
