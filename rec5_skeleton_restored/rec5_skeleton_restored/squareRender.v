@@ -14,6 +14,14 @@ module squareRender (
  wire [9:0] k;
  wire [144:0] movingSquares;
  wire [144:0] background;
+wire fall;
+ //get the falling signal
+// module autoDown(    
+//    input clk,     
+//    input down,        
+//    output moveSig  
+//);
+autoDown fall1(clk, down, fall);
 
  //square size is 40
  parameter [9:0] w = 40;
@@ -54,7 +62,7 @@ reachedBottom reachedBottom2(clk, background, movingSquares, refresh);
 initializer init1(clk, refresh, initialSquare);
 assign initialBackground = 145'b0;
 //curSquares getPos1(clk, 1'b0, 1'b0, 1'b0, 1'b0, initialSquare, initialBackground, background, movingSquares);
-curSquares getPos1(clk, left, right, up, down, initialSquare, initialBackground, background, movingSquares);
+curSquares getPos1(clk, left, right, up, fall, initialSquare, initialBackground, background, movingSquares);
 
 
 //assign background = 145'b00001111000000000010;

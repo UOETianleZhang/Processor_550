@@ -71,7 +71,7 @@ wire [7:0] qout;
 wire [7:0] qout1;
 wire [7:0] qout2;
 wire [9:0] score;
-assign score = 10'd666;
+assign score = 10'd123;
 //square square1(ADDR, VGA_CLK_n, index, qout, left, right, up, down);
 
 //zhuyi!!!!!

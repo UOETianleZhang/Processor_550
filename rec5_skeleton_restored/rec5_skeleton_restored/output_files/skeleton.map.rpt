@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Sat Dec 07 20:59:49 2019
+Sat Dec 07 21:29:34 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -45,9 +45,9 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
  37. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|lpm_divide:Div2
  38. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|printScore:render2|lpm_divide:Div0
  39. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|printScore:render2|lpm_divide:Div1
- 40. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0
- 41. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Mod0
- 42. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1
+ 40. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1
+ 41. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0
+ 42. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Mod0
  43. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|initializer:init1|lpm_divide:Mod0
  44. altpll Parameter Settings by Entity Instance
  45. altsyncram Parameter Settings by Entity Instance
@@ -100,15 +100,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 07 20:59:48 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 07 21:29:34 2019       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 7,074                                       ;
-;     Total combinational functions  ; 6,777                                       ;
-;     Dedicated logic registers      ; 1,059                                       ;
-; Total registers                    ; 1059                                        ;
+; Total logic elements               ; 7,105                                       ;
+;     Total combinational functions  ; 6,808                                       ;
+;     Dedicated logic registers      ; 1,085                                       ;
+; Total registers                    ; 1085                                        ;
 ; Total pins                         ; 154                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,463,744                                   ;
@@ -259,6 +259,7 @@ agreement for further details.
 ; curScore.v                       ; yes             ; User Verilog HDL File            ; C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/curScore.v                     ;         ;
 ; setScore.v                       ; yes             ; User Verilog HDL File            ; C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/setScore.v                     ;         ;
 ; Random_3.v                       ; yes             ; User Verilog HDL File            ; C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/Random_3.v                     ;         ;
+; autoDown.v                       ; yes             ; User Verilog HDL File            ; C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/autoDown.v                     ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                     ; c:/altera_lite/16.0.bak/quartus/libraries/megafunctions/altpll.tdf                                                        ;         ;
 ; aglobal160.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/16.0.bak/quartus/libraries/megafunctions/aglobal160.inc                                                    ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                     ; c:/altera_lite/16.0.bak/quartus/libraries/megafunctions/stratix_pll.inc                                                   ;         ;
@@ -309,20 +310,20 @@ agreement for further details.
 +---------------------------------------------+------------------------------------------------+
 ; Resource                                    ; Usage                                          ;
 +---------------------------------------------+------------------------------------------------+
-; Estimated Total logic elements              ; 7,074                                          ;
+; Estimated Total logic elements              ; 7,105                                          ;
 ;                                             ;                                                ;
-; Total combinational functions               ; 6777                                           ;
+; Total combinational functions               ; 6808                                           ;
 ; Logic element usage by number of LUT inputs ;                                                ;
-;     -- 4 input functions                    ; 4456                                           ;
-;     -- 3 input functions                    ; 1262                                           ;
-;     -- <=2 input functions                  ; 1059                                           ;
+;     -- 4 input functions                    ; 4494                                           ;
+;     -- 3 input functions                    ; 1237                                           ;
+;     -- <=2 input functions                  ; 1077                                           ;
 ;                                             ;                                                ;
 ; Logic elements by mode                      ;                                                ;
-;     -- normal mode                          ; 6177                                           ;
-;     -- arithmetic mode                      ; 600                                            ;
+;     -- normal mode                          ; 6184                                           ;
+;     -- arithmetic mode                      ; 624                                            ;
 ;                                             ;                                                ;
-; Total registers                             ; 1059                                           ;
-;     -- Dedicated logic registers            ; 1059                                           ;
+; Total registers                             ; 1085                                           ;
+;     -- Dedicated logic registers            ; 1085                                           ;
 ;     -- I/O registers                        ; 0                                              ;
 ;                                             ;                                                ;
 ; I/O pins                                    ; 154                                            ;
@@ -334,8 +335,8 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                              ;
 ;                                             ;                                                ;
 ; Maximum fan-out node                        ; VGA_Audio_PLL:p1|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 1018                                           ;
-; Total fan-out                               ; 31948                                          ;
+; Maximum fan-out                             ; 1044                                           ;
+; Total fan-out                               ; 32133                                          ;
 ; Average fan-out                             ; 3.77                                           ;
 +---------------------------------------------+------------------------------------------------+
 
@@ -345,7 +346,7 @@ agreement for further details.
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                   ; Entity Name                  ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |skeleton                                          ; 6777 (0)          ; 1059 (0)     ; 2463744     ; 0            ; 0       ; 0         ; 154  ; 0            ; |skeleton                                                                                                                                                                             ; skeleton                     ; work         ;
+; |skeleton                                          ; 6808 (0)          ; 1085 (0)     ; 2463744     ; 0            ; 0       ; 0         ; 154  ; 0            ; |skeleton                                                                                                                                                                             ; skeleton                     ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:hex1|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Hexadecimal_To_Seven_Segment:hex1                                                                                                                                           ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |Hexadecimal_To_Seven_Segment:hex2|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Hexadecimal_To_Seven_Segment:hex2                                                                                                                                           ; Hexadecimal_To_Seven_Segment ; work         ;
 ;    |PS2_Interface:myps2|                           ; 41 (9)            ; 38 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|PS2_Interface:myps2                                                                                                                                                         ; PS2_Interface                ; work         ;
@@ -356,7 +357,7 @@ agreement for further details.
 ;       |altpll:altpll_component|                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                                                                    ; altpll                       ; work         ;
 ;    |converter:myConverter|                         ; 57 (57)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|converter:myConverter                                                                                                                                                       ; converter                    ; work         ;
 ;    |lcd:mylcd|                                     ; 392 (392)         ; 278 (278)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|lcd:mylcd                                                                                                                                                                   ; lcd                          ; work         ;
-;    |vga_controller:vga_ins|                        ; 6246 (30)         ; 688 (46)     ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                                                                      ; vga_controller               ; work         ;
+;    |vga_controller:vga_ins|                        ; 6277 (29)         ; 714 (46)     ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                                                                      ; vga_controller               ; work         ;
 ;       |img_data:img_data_inst|                     ; 278 (0)           ; 6 (0)        ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst                                                                                                                               ; img_data                     ; work         ;
 ;          |altsyncram:altsyncram_component|         ; 278 (0)           ; 6 (0)        ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component                                                                                               ; altsyncram                   ; work         ;
 ;             |altsyncram_ekc1:auto_generated|       ; 278 (0)           ; 6 (6)        ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated                                                                ; altsyncram_ekc1              ; work         ;
@@ -369,11 +370,11 @@ agreement for further details.
 ;          |lpm_divide_lcm:auto_generated|           ; 157 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated                                                                                                        ; lpm_divide_lcm               ; work         ;
 ;             |sign_div_unsign_anh:divider|          ; 157 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                                                            ; sign_div_unsign_anh          ; work         ;
 ;                |alt_u_div_8af:divider|             ; 157 (157)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                                                      ; alt_u_div_8af                ; work         ;
-;       |printScore:render2|                         ; 382 (24)          ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2                                                                                                                                   ; printScore                   ; work         ;
-;          |lpm_divide:Div0|                         ; 168 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0                                                                                                                   ; lpm_divide                   ; work         ;
-;             |lpm_divide_ikm:auto_generated|        ; 168 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated                                                                                     ; lpm_divide_ikm               ; work         ;
-;                |sign_div_unsign_anh:divider|       ; 168 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                                         ; sign_div_unsign_anh          ; work         ;
-;                   |alt_u_div_8af:divider|          ; 168 (168)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                                   ; alt_u_div_8af                ; work         ;
+;       |printScore:render2|                         ; 382 (25)          ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2                                                                                                                                   ; printScore                   ; work         ;
+;          |lpm_divide:Div0|                         ; 167 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0                                                                                                                   ; lpm_divide                   ; work         ;
+;             |lpm_divide_ikm:auto_generated|        ; 167 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated                                                                                     ; lpm_divide_ikm               ; work         ;
+;                |sign_div_unsign_anh:divider|       ; 167 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                                         ; sign_div_unsign_anh          ; work         ;
+;                   |alt_u_div_8af:divider|          ; 167 (167)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                                   ; alt_u_div_8af                ; work         ;
 ;          |lpm_divide:Div1|                         ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div1                                                                                                                   ; lpm_divide                   ; work         ;
 ;             |lpm_divide_sim:auto_generated|        ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div1|lpm_divide_sim:auto_generated                                                                                     ; lpm_divide_sim               ; work         ;
 ;                |sign_div_unsign_klh:divider|       ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div1|lpm_divide_sim:auto_generated|sign_div_unsign_klh:divider                                                         ; sign_div_unsign_klh          ; work         ;
@@ -382,9 +383,9 @@ agreement for further details.
 ;             |lpm_divide_0jm:auto_generated|        ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div2|lpm_divide_0jm:auto_generated                                                                                     ; lpm_divide_0jm               ; work         ;
 ;                |sign_div_unsign_olh:divider|       ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div2|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider                                                         ; sign_div_unsign_olh          ; work         ;
 ;                   |alt_u_div_47f:divider|          ; 108 (108)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|printScore:render2|lpm_divide:Div2|lpm_divide_0jm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_47f:divider                                   ; alt_u_div_47f                ; work         ;
-;       |squareRender:render1|                       ; 5355 (213)        ; 604 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1                                                                                                                                 ; squareRender                 ; work         ;
-;          |curSquares:getPos1|                      ; 5007 (1754)       ; 588 (444)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1                                                                                                              ; curSquares                   ; work         ;
-;             |reachedBond:reachedBond1|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|reachedBond:reachedBond1                                                                                     ; reachedBond                  ; work         ;
+;       |squareRender:render1|                       ; 5387 (212)        ; 630 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1                                                                                                                                 ; squareRender                 ; work         ;
+;          |autoDown:fall1|                          ; 37 (37)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|autoDown:fall1                                                                                                                  ; autoDown                     ; work         ;
+;          |curSquares:getPos1|                      ; 5004 (1752)       ; 588 (444)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1                                                                                                              ; curSquares                   ; work         ;
 ;             |reachedBottom:reachedBottom1|         ; 92 (92)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|reachedBottom:reachedBottom1                                                                                 ; reachedBottom                ; work         ;
 ;             |rotated:myRo|                         ; 3160 (2998)       ; 144 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo                                                                                                 ; rotated                      ; work         ;
 ;                |lpm_divide:Div0|                   ; 78 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
@@ -395,7 +396,7 @@ agreement for further details.
 ;                   |lpm_divide_vam:auto_generated|  ; 84 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Mod0|lpm_divide_vam:auto_generated                                                   ; lpm_divide_vam               ; work         ;
 ;                      |sign_div_unsign_klh:divider| ; 84 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ; sign_div_unsign_klh          ; work         ;
 ;                         |alt_u_div_s6f:divider|    ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Mod0|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ; alt_u_div_s6f                ; work         ;
-;          |initializer:init1|                       ; 14 (6)            ; 8 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1                                                                                                               ; initializer                  ; work         ;
+;          |initializer:init1|                       ; 13 (5)            ; 8 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1                                                                                                               ; initializer                  ; work         ;
 ;             |Random_3:getRan1|                     ; 1 (1)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|Random_3:getRan1                                                                                              ; Random_3                     ; work         ;
 ;             |lpm_divide:Mod0|                      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|lpm_divide:Mod0                                                                                               ; lpm_divide                   ; work         ;
 ;                |lpm_divide_g9m:auto_generated|     ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|lpm_divide:Mod0|lpm_divide_g9m:auto_generated                                                                 ; lpm_divide_g9m               ; work         ;
@@ -486,7 +487,9 @@ Encoding Type:  One-Hot
 ; Register name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ; Reason for Removal                                                                                          ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 ; PS2_Interface:myps2|PS2_Controller:PS2|idle_counter[0..7]                                                                                                                                                                                                                                                                                                                                                                                                                                        ; Lost fanout                                                                                                 ;
-; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[0..3,7..15,19..28,30..40,42..144]                                                                                                                                                                                                                                                                                                                                                                                            ; Stuck at GND due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[8..15,19..39]                                                                                                                                                                                                                                                                                                                                                                                                                ; Stuck at GND due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[6]                                                                                                                                                                                                                                                                                                                                                                                                                           ; Stuck at VCC due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[0..3,40..144]                                                                                                                                                                                                                                                                                                                                                                                                                ; Stuck at GND due to stuck port data_in                                                                      ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[11,23,25,27,53,55,59,94,96,98,100,147,148,152,154,156,158,160,162,164,229,231,239,243,257,259,264..266,268,270,272,274,276,278,280,282,284,286,288,290,292,294,411,419,423,431,435,443,447,452,454..456,458..460,462,464,466,468,470,474,479,482..484,488,490,492,494,496,498,500,502,504,506,508,510,512,514,516,518,520,522,524,526,528,530,532,534,536,538,540,542,544,546,548,550,552]                  ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[3]         ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[13,14,77,83,86,109,117,125,131,133,135,137,139,141,145,157,173,181,189,197,205,213,237,241,247,251,255,269,277,285,301,309,317,325,333,341,349,357,365,373,381,389,397,405,409,413,417,421,425,429,433,437,441,445,449,451,453,457,461,463,465,469,477,478,485,486,493,501,509,517,525,533,541,557,565,573,581,589,597,605,613,621,629,637,645,653,661,669,677,685,693,701,709,717,725,733,741,749,757,765] ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[7]         ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[21,43,76,78,80,116,118,120,122,124,126,192,194,196,198,200,202,204,206,208,210,212,214,216,346,348,350,352,354,356,358,360,362,364,366,368,370,372,374,376,378,380,382,384,386,388,390,392,394,654,656,658,660,662,664,666,668,670,672,674,676,678,680,682,684,686,688,690,692,694,696,698,700,702,704,706,708,710,712,714,716,718,720,722,724,726,728,730,732,734,736,738,740,742,744,746,748,750,752,754] ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[12]        ;
@@ -505,13 +508,12 @@ Encoding Type:  One-Hot
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[69]                                                                                                                                                                                                                                                                                                                                                                                                         ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[68]        ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[34,66]                                                                                                                                                                                                                                                                                                                                                                                                      ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[2]         ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[65]                                                                                                                                                                                                                                                                                                                                                                                                         ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[64]        ;
-; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[41]                                                                                                                                                                                                                                                                                                                                                                                                                          ; Merged with vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[29]                         ;
 ; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[3]                                                                                                                                                                                                                                                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                      ;
 ; lcd:mylcd|state2[31]                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                      ;
 ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[0]                                                                                                                                                                                                                                                                                                                                                                                                  ; Stuck at GND due to stuck port data_in                                                                      ;
-; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[0..2,4,5,8..10,16,20,24,32,33,36..38,40,41,48,50,52,54,56,58,64,68,72]                                                                                                                                                                                                                                                                                                                                      ; Stuck at VCC due to stuck port data_in                                                                      ;
-; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[22,26]                                                                                                                                                                                                                                                                                                                                                                                                      ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[18]        ;
-; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[18]                                                                                                                                                                                                                                                                                                                                                                                                         ; Stuck at GND due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[2,4,5,8..10,18,22,26,36..38,40,41,50,52,58,68,72]                                                                                                                                                                                                                                                                                                                                                           ; Stuck at VCC due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[1,16,20,24,32,33,48,54,56,64]                                                                                                                                                                                                                                                                                                                                                                               ; Merged with vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[0]         ;
+; vga_controller:vga_ins|printScore:render2|curScore:getScore1|setScore:setDigit|score[0]                                                                                                                                                                                                                                                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                                                                      ;
 ; lcd:mylcd|state1[10]                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ; Stuck at GND due to stuck port data_in                                                                      ;
 ; lcd:mylcd|line2[10][7]                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                                      ;
 ; lcd:mylcd|line2[11][7]                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; Stuck at GND due to stuck port data_in                                                                      ;
@@ -571,9 +573,8 @@ Encoding Type:  One-Hot
 ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|error_communication_timed_out                                                                                                                                                                                                                                                                                                                                                                                   ; Stuck at GND due to stuck port data_in                                                                      ;
 ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|ps2_command[8]                                                                                                                                                                                                                                                                                                                                                                                                  ; Lost fanout                                                                                                 ;
 ; PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|s_ps2_transmitter.PS2_STATE_0_IDLE                                                                                                                                                                                                                                                                                                                                                                              ; Lost fanout                                                                                                 ;
-; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[18]                                                                                                                                                                                                                                                                                                                                                                                                                          ; Merged with vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[5]                          ;
-; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[6]                                                                                                                                                                                                                                                                                                                                                                                                                           ; Merged with vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[29]                         ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[144]                                                                                                                                                                                                                                                                                                                                                                                                                    ; Stuck at GND due to stuck port data_in                                                                      ;
+; vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[18]                                                                                                                                                                                                                                                                                                                                                                                                                          ; Merged with vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[5]                          ;
 ; Total Number of Removed Registers = 1094                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;                                                                                                             ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+
 
@@ -672,12 +673,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1059  ;
-; Number of registers using Synchronous Clear  ; 174   ;
-; Number of registers using Synchronous Load   ; 112   ;
+; Total registers                              ; 1085  ;
+; Number of registers using Synchronous Clear  ; 201   ;
+; Number of registers using Synchronous Load   ; 110   ;
 ; Number of registers using Asynchronous Clear ; 318   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 600   ;
+; Number of registers using Clock Enable       ; 598   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -721,7 +722,7 @@ Encoding Type:  One-Hot
 ; lcd:mylcd|line2[5][5]                                                          ; 3       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[17]   ; 10      ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[5]    ; 9       ;
-; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[6]    ; 9       ;
+; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[6]    ; 10      ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[4]    ; 9       ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|centralPoint[0] ; 62      ;
 ; vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|centralPoint[2] ; 10      ;
@@ -737,66 +738,66 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[3]                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|last_data_received[0]                                                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[1]                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|received_data[2]                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|last_data_received[1]                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_shift_reg[2]                    ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[15][4]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[14][4]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[13][4]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[14][7]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[13][7]                                                                                        ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[12][7]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[11][4]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[10][7]                                                                                        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[9][6]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[8][2]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[11][2]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[10][3]                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[9][7]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[8][1]                                                                                         ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[7][3]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[6][1]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[5][6]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[4][6]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[3][3]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[2][3]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[6][2]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[5][7]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[4][7]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[3][1]                                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[2][6]                                                                                         ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[1][1]                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[0][0]                                                                                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|lcd:mylcd|ptr[0]                                                                                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |skeleton|lcd:mylcd|cdone                                                                                               ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |skeleton|lcd:mylcd|line2[0][2]                                                                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|lcd:mylcd|ptr[2]                                                                                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |skeleton|lcd:mylcd|mstart                                                                                              ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |skeleton|lcd:mylcd|index[5]                                                                                            ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[29]                                       ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[4]          ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[10] ;
-; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[20]          ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[18]                                       ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|transfer_counter[1]          ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|command_initiate_counter[12] ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|waiting_counter[2]           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Command_Out:PS2_Command_Out|cur_bit[0]                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[3]                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|PS2_Interface:myps2|PS2_Controller:PS2|Altera_UP_PS2_Data_In:PS2_Data_In|data_count[1]                        ;
 ; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|centralPoint[7]                                ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[2]                                   ;
-; 6:1                ; 127 bits  ; 508 LEs       ; 381 LEs              ; 127 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[26]                                  ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[29]                                  ;
-; 38:1               ; 8 bits    ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; Yes        ; |skeleton|lcd:mylcd|lcd_data[4]                                                                                         ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[17]                                       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[4]                                   ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux112                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux121                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux237                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux136                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux141                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux150                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux160                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux167                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux176                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux180                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux194                            ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux196                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux213                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux118                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux130                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux133                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux142                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux277                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux289                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux302                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux315                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux186                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux188                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux358                            ;
-; 145:1              ; 2 bits    ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|Mux1                                                              ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[1]                                   ;
+; 6:1                ; 129 bits  ; 516 LEs       ; 387 LEs              ; 129 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[104]                                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[18]                                  ;
+; 38:1               ; 8 bits    ; 200 LEs       ; 200 LEs              ; 0 LEs                  ; Yes        ; |skeleton|lcd:mylcd|lcd_data[1]                                                                                         ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|initializer:init1|shape[17]                                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|squareIdx[5]                                   ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux114                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux118                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux239                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux138                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux140                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux148                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux291                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux169                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux317                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux184                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux341                            ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux197                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux114                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux116                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux128                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux250                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux143                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux152                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux161                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux167                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux177                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux328                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux191                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mux196                            ;
+; 145:1              ; 2 bits    ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |skeleton|vga_controller:vga_ins|squareRender:render1|Mux0                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1838,7 +1839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value                                                                                                                                             ; Type            ;
 +----------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 ; box            ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000000001010000 ; Unsigned Binary ;
-; Ishape         ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000100000000000100000000000100000 ; Unsigned Binary ;
+; Ishape         ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011110000 ; Unsigned Binary ;
 ; Tshape         ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000001110000 ; Unsigned Binary ;
 ; Lshape         ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000001110000 ; Unsigned Binary ;
 ; Zshape         ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000001100000 ; Unsigned Binary ;
@@ -2046,6 +2047,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                               ;
++------------------------+----------------+--------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                            ;
+; LPM_WIDTHD             ; 6              ; Untyped                                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
+; CBXI_PARAMETER         ; lpm_divide_uim ; Untyped                                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
++------------------------+----------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0 ;
 +------------------------+----------------+----------------------------------------------------------------------------------------------------+
@@ -2089,29 +2113,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                       ;
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                     ;
 +------------------------+----------------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1 ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                               ;
-+------------------------+----------------+--------------------------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                                            ;
-; LPM_WIDTHD             ; 6              ; Untyped                                                            ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                            ;
-; LPM_PIPELINE           ; 0              ; Untyped                                                            ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                            ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                                            ;
-; CBXI_PARAMETER         ; lpm_divide_uim ; Untyped                                                            ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                                            ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                            ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                         ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                       ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                       ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                     ;
-+------------------------+----------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2239,14 +2240,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------------------------------+
 ; Port        ; Type  ; Severity ; Details                              ;
 +-------------+-------+----------+--------------------------------------+
-; score[4..3] ; Input ; Info     ; Stuck at VCC                         ;
-; score[6..5] ; Input ; Info     ; Stuck at GND                         ;
-; score[9]    ; Input ; Info     ; Stuck at VCC                         ;
-; score[8]    ; Input ; Info     ; Stuck at GND                         ;
-; score[7]    ; Input ; Info     ; Stuck at VCC                         ;
+; score[6..3] ; Input ; Info     ; Stuck at VCC                         ;
+; score[1..0] ; Input ; Info     ; Stuck at VCC                         ;
+; score[9..7] ; Input ; Info     ; Stuck at GND                         ;
 ; score[2]    ; Input ; Info     ; Stuck at GND                         ;
-; score[1]    ; Input ; Info     ; Stuck at VCC                         ;
-; score[0]    ; Input ; Info     ; Stuck at GND                         ;
 +-------------+-------+----------+--------------------------------------+
 
 
@@ -2434,34 +2431,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 154                         ;
-; cycloneiii_ff         ; 1059                        ;
+; cycloneiii_ff         ; 1085                        ;
 ;     CLR               ; 45                          ;
 ;     CLR SCLR          ; 19                          ;
-;     ENA               ; 211                         ;
+;     ENA               ; 209                         ;
 ;     ENA CLR           ; 236                         ;
 ;     ENA CLR SCLR      ; 18                          ;
-;     ENA SCLR          ; 131                         ;
-;     ENA SLD           ; 4                           ;
-;     SCLR              ; 6                           ;
+;     ENA SCLR          ; 133                         ;
+;     ENA SLD           ; 2                           ;
+;     SCLR              ; 31                          ;
 ;     SLD               ; 108                         ;
-;     plain             ; 281                         ;
+;     plain             ; 284                         ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 6783                        ;
-;     arith             ; 600                         ;
+; cycloneiii_lcell_comb ; 6814                        ;
+;     arith             ; 624                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 280                         ;
+;         2 data inputs ; 304                         ;
 ;         3 data inputs ; 319                         ;
-;     normal            ; 6183                        ;
+;     normal            ; 6190                        ;
 ;         0 data inputs ; 88                          ;
-;         1 data inputs ; 26                          ;
-;         2 data inputs ; 670                         ;
-;         3 data inputs ; 943                         ;
-;         4 data inputs ; 4456                        ;
+;         1 data inputs ; 27                          ;
+;         2 data inputs ; 663                         ;
+;         3 data inputs ; 918                         ;
+;         4 data inputs ; 4494                        ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 328                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 48.80                       ;
-; Average LUT depth     ; 23.01                       ;
+; Average LUT depth     ; 22.91                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2470,7 +2467,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:35     ;
+; Top            ; 00:01:34     ;
 +----------------+--------------+
 
 
@@ -2480,7 +2477,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Dec 07 20:57:46 2019
+    Info: Processing started: Sat Dec 07 21:27:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -2548,6 +2545,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file random_
     Info (12023): Found entity 1: Random_3 File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/Random_3.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ratatesignal.v
     Info (12023): Found entity 1: ratateSignal File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/ratateSignal.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file autodown.v
+    Info (12023): Found entity 1: autoDown File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/autoDown.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(52): created implicit net for "inclock" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/skeleton.v Line: 52
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(89): created implicit net for "DLY_RST" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/skeleton.v Line: 89
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(90): created implicit net for "VGA_CTRL_CLK" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/skeleton.v Line: 90
@@ -2761,13 +2760,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_1pb File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/mux_1pb.tdf Line: 23
 Info (12128): Elaborating entity "mux_1pb" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|mux_1pb:mux2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/altsyncram_ekc1.tdf Line: 41
 Info (12128): Elaborating entity "squareRender" for hierarchy "vga_controller:vga_ins|squareRender:render1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/vga_controller.v Line: 78
-Warning (10230): Verilog HDL assignment warning at squareRender.v(24): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 24
-Warning (10230): Verilog HDL assignment warning at squareRender.v(26): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 26
-Warning (10230): Verilog HDL assignment warning at squareRender.v(28): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
-Info (12128): Elaborating entity "reachedBottom" for hierarchy "vga_controller:vga_ins|squareRender:render1|reachedBottom:reachedBottom2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 53
-Info (12128): Elaborating entity "initializer" for hierarchy "vga_controller:vga_ins|squareRender:render1|initializer:init1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 54
+Warning (10230): Verilog HDL assignment warning at squareRender.v(32): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 32
+Warning (10230): Verilog HDL assignment warning at squareRender.v(34): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 34
+Warning (10230): Verilog HDL assignment warning at squareRender.v(36): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
+Info (12128): Elaborating entity "autoDown" for hierarchy "vga_controller:vga_ins|squareRender:render1|autoDown:fall1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 24
+Warning (10230): Verilog HDL assignment warning at autoDown.v(18): truncated value with size 32 to match size of target (25) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/autoDown.v Line: 18
+Warning (10230): Verilog HDL assignment warning at autoDown.v(29): truncated value with size 32 to match size of target (25) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/autoDown.v Line: 29
+Info (12128): Elaborating entity "reachedBottom" for hierarchy "vga_controller:vga_ins|squareRender:render1|reachedBottom:reachedBottom2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 61
+Info (12128): Elaborating entity "initializer" for hierarchy "vga_controller:vga_ins|squareRender:render1|initializer:init1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 62
 Info (12128): Elaborating entity "Random_3" for hierarchy "vga_controller:vga_ins|squareRender:render1|initializer:init1|Random_3:getRan1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/initializer.v Line: 22
-Info (12128): Elaborating entity "curSquares" for hierarchy "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 57
+Info (12128): Elaborating entity "curSquares" for hierarchy "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 65
 Warning (10230): Verilog HDL assignment warning at curSquares.v(82): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/curSquares.v Line: 82
 Warning (10230): Verilog HDL assignment warning at curSquares.v(85): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/curSquares.v Line: 85
 Warning (10230): Verilog HDL assignment warning at curSquares.v(88): truncated value with size 32 to match size of target (10) File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/curSquares.v Line: 88
@@ -2888,12 +2890,12 @@ Warning (14284): Synthesized away the following node(s):
 Info (278001): Inferred 9 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Mod0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/vga_controller.v Line: 89
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|printScore:render2|Div2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/printScore.v Line: 18
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|Div2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|Div2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|printScore:render2|Div0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/printScore.v Line: 14
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|printScore:render2|Div1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/printScore.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|Div1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Div0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/rotated.v Line: 18
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|Mod0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/rotated.v Line: 19
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|Div1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|squareRender:render1|initializer:init1|Mod0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/initializer.v Line: 29
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Mod0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/vga_controller.v Line: 89
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Mod0" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/vga_controller.v Line: 89
@@ -2923,8 +2925,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/sign_div_unsign_olh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_47f.tdf
     Info (12023): Found entity 1: alt_u_div_47f File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/alt_u_div_47f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div2" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div2" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div2" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2955,6 +2957,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/sign_div_unsign_klh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s6f.tdf
     Info (12023): Found entity 1: alt_u_div_s6f File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/alt_u_div_s6f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/rotated.v Line: 18
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|curSquares:getPos1|rotated:myRo|lpm_divide:Div0" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/rotated.v Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "10"
@@ -2969,12 +2977,6 @@ Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:ren
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vam.tdf
     Info (12023): Found entity 1: lpm_divide_vam File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/db/lpm_divide_vam.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|lpm_divide:Div1" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/squareRender.v Line: 28
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|squareRender:render1|initializer:init1|lpm_divide:Mod0" File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/initializer.v Line: 29
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|squareRender:render1|initializer:init1|lpm_divide:Mod0" with the following parameter: File: C:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/initializer.v Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "3"
@@ -3102,17 +3104,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (15897): PLL "VGA_Audio_PLL:p1|altpll:altpll_component|pll" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: c:/altera_lite/16.0.bak/quartus/libraries/megafunctions/altpll.tdf Line: 921
 Warning (15899): PLL "VGA_Audio_PLL:p1|altpll:altpll_component|pll" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: c:/altera_lite/16.0.bak/quartus/libraries/megafunctions/altpll.tdf Line: 921
-Info (21057): Implemented 7666 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7699 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 150 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 7183 logic cells
+    Info (21061): Implemented 7216 logic cells
     Info (21064): Implemented 328 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 207 warnings
-    Info: Peak virtual memory: 5129 megabytes
-    Info: Processing ended: Sat Dec 07 20:59:49 2019
-    Info: Elapsed time: 00:02:03
-    Info: Total CPU time (on all processors): 00:02:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 209 warnings
+    Info: Peak virtual memory: 5126 megabytes
+    Info: Processing ended: Sat Dec 07 21:29:34 2019
+    Info: Elapsed time: 00:01:59
+    Info: Total CPU time (on all processors): 00:02:05
 
 
