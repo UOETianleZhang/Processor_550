@@ -2,7 +2,7 @@ module reachedBottom(
 	input clk,
 	input [143:0] backGround,
 	input [143:0] currentSqs,
-	output hasReachedBottom
+	output reg hasReachedBottom
 );
 
   wire [143:0] signals;
@@ -16,6 +16,9 @@ module reachedBottom(
     end
   endgenerate
   
-  assign hasReachedBottom = signals > 145'b0;
+      always @ (posedge clk) begin
+			hasReachedBottom = signals > 145'b0;
+		end
+//  assign hasReachedBottom = signals > 145'b0;
 
 endmodule

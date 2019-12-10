@@ -13,6 +13,7 @@ reg[768:0] score;
 assign scoreIdx = score;
 
 always@(posedge clk) begin
+ score = 769'b0;
  case(digit1)
     9'd0:begin
      score[step1] = 1'b1;

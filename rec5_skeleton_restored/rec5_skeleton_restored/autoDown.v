@@ -8,7 +8,8 @@ module autoDown(
  
  always@(posedge clk) begin
   if(~down) begin
-   if (counter >= 25'd20000000) begin
+   //if (counter % 25'd20000000 == 25'b0) begin
+	if (counter >= 25'd20000000) begin
     // d10000000 2Hz
     sig = 1'b1;
     counter = 0;
@@ -19,15 +20,17 @@ module autoDown(
    end
   end
   else begin
-   if (counter >= 25'd3000000) begin
-    // d5000000 4Hz
-    sig = 1'b1;
-    counter = 0;
-   end
-   else begin
-    sig = 1'b0;
-    counter = counter + 1;
-   end
+	sig = 1'b1;
+	counter = counter + 1;
+//   if (counter >= 25'd3000000) begin
+//    // d5000000 4Hz
+//    sig = 1'b1;
+//    counter = 0;
+//   end
+//   else begin
+//    sig = 1'b0;
+//    counter = counter + 1;
+//   end
   end
    end
  

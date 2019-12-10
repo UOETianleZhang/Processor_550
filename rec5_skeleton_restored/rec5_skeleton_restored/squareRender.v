@@ -6,7 +6,14 @@ module squareRender (
   input right,
   input up,
   input down,
-  output reg [7:0]  qout
+  input [9:0] scoreToPrint,
+  output [9:0] myScore,
+  output [9:0] toAdd,
+  output reg [7:0]  qout,
+    		input [10:0] offsetX,
+	input [10:0] offsetY,
+			output [10:0] rx,
+	output [10:0] ry
 );
 
  wire [9:0] i;
@@ -26,7 +33,7 @@ autoDown fall1(clk, down, fall);
  //square size is 40
  parameter [9:0] w = 40;
  parameter [9:0] h = 40;
- parameter [7:0] colorIndex = 8'haa;
+ parameter [7:0] colorIndex = 8'h02;
  
  //row of current addr
  assign i = address / 640;
@@ -62,14 +69,14 @@ reachedBottom reachedBottom2(clk, background, movingSquares, refresh);
 initializer init1(clk, refresh, initialSquare);
 assign initialBackground = 145'b0;
 //curSquares getPos1(clk, 1'b0, 1'b0, 1'b0, 1'b0, initialSquare, initialBackground, background, movingSquares);
-curSquares getPos1(clk, left, right, up, fall, initialSquare, initialBackground, background, movingSquares);
+curSquares getPos1(clk, left, right, up, fall, scoreToPrint, myScore, toAdd, initialSquare, initialBackground, background, movingSquares, offsetX, offsetY, rx, ry);
 
 
 //assign background = 145'b00001111000000000010;
 //assign movingSquares = 145'd16;
  
  always@(posedge clk) begin
-  if((background[k] == 1'b1 || movingSquares[k] == 1'b1) && j < 480) begin
+  if((background[k] == 1'b1 || movingSquares[k] == 1'b1) && j < 480 && i % w != 0 && j % h != 0) begin
    qout = colorIndex;
   end
   else begin

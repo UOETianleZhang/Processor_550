@@ -70,12 +70,62 @@ img_data	img_data_inst (
 wire [7:0] qout;
 wire [7:0] qout1;
 wire [7:0] qout2;
+//reg [9:0] score = 0;
 wire [9:0] score;
-assign score = 10'd123;
+wire [9:0] myScore;
+wire [9:0] toAdd;
+//assign score = 10'd123;
 //square square1(ADDR, VGA_CLK_n, index, qout, left, right, up, down);
+reg [24:0] counter = 0;
+
+//always@(posedge iVGA_CLK) begin
+//			if (counter == 25'd5000) begin
+//			score = myScore + toAdd;
+////				score = toAdd;
+//				counter = 0;
+//			end
+//			else begin
+//				counter = counter + 1;
+//			end
+//end
+
+
+//module getScoreCpu(
+// input clk,
+// input reset,
+// input [3:0] var,
+// input [10:0] rx,
+// input [10:0] ry,
+// input [9:0] curScore,
+// output [10:0] offsetX,
+// output [10:0] offsetY,
+// output [9:0] score
+//);
+
+wire [10:0] offsetX;
+wire [10:0] offsetY;
+wire [10:0] rx;
+wire [10:0] ry;
+wire [10:0] ox;
+wire [10:0] oy;
+
+	assign offsetY = 11 - rx - ry;	//coor should left shift by
+	assign offsetX = ry - rx; // should move up by
+
+//getScoreCpu myCpu(iVGA_CLK, 1'b0, toAdd, rx, ry, myScore, offsetX, offsetY, score);
+getScoreCpu myCpu(iVGA_CLK, 1'b0, toAdd, rx, ry, myScore, ox, oy, score);
+//getScoreCpu myCpu(
+// clk, 1'b0, toAdd, 11'b0, 11'b0, myScore, offsetX, offsetY, score);
+
+//always@(posedge iVGA_CLK) begin
+//	score = myScore + toAdd;
+////	score = toAdd;
+//end
+
+//assign score =  toAdd;
 
 //zhuyi!!!!!
-squareRender render1(ADDR, index, VGA_CLK_n, left, right, up, down, qout1);
+squareRender render1(ADDR, index, VGA_CLK_n, left, right, up, down, score, myScore, toAdd, qout1,  offsetX, offsetY, rx, ry);
 
 //module printScore(
 // input clk,
@@ -86,7 +136,9 @@ squareRender render1(ADDR, index, VGA_CLK_n, left, right, up, down, qout1);
 //);
 printScore render2(VGA_CLK_n, ADDR,  index, score, qout2);
 
-assign qout = ADDR % 640 < 480 ? qout1 : qout2;
+
+
+assign qout = ADDR % 640 < 480 ? qout1 : (ADDR % 640 > 480 ? qout2 : 8'h00);
 
 //////Color table output
 img_index	img_index_inst (

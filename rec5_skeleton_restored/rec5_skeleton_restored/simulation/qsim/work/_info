@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tz94/Documents/GitHub/Processor_550/rec5_skeleton_restored/rec5_skeleton_restored/simulation/qsim
+vcurSquares
+!s110 1575931243
+!i10b 1
+!s100 =Hj5@_oKdU;[HfTCgWhCT1
+IG6e5f2KLkBSbfD8TYQ3c80
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1575931241
+Z2 8skeleton.vo
+Z3 Fskeleton.vo
+Z4 L0 32
+Z5 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1575931243.000000
+Z6 !s107 skeleton.vo|
+Z7 !s90 -work|work|skeleton.vo|
+!i113 1
+Z8 o-work work
+ncur@squares
+vcurSquares_vlg_vec_tst
+!s110 1575931244
+!i10b 1
+!s100 Qm3^_?ed>8Eg>^Y_BLRCb3
+Ia@;EQG@8k20TfCL?T3dz?3
+R1
+R0
+w1575931238
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+Z9 L0 30
+R5
+r1
+!s85 0
+31
+!s108 1575931244.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R8
+ncur@squares_vlg_vec_tst
+vgetScoreCpu
+Z10 !s110 1575945740
+!i10b 1
+!s100 4;m@S@0>ilL^T^ClG^i[R2
+IcIzo:CSlDdNhT:ZWR:F[Z3
+R1
+R0
+w1575945737
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+!s108 1575945739.000000
+R6
+R7
+!i113 1
+R8
+nget@score@cpu
+vgetScoreCpu_vlg_vec_tst
+R10
+!i10b 1
+!s100 QXA^do:5IdoF[FSOh;kM20
+I248<gJSg^KXj;jXUmmiM63
+R1
+R0
+w1575945734
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+R9
+R5
+r1
+!s85 0
+31
+!s108 1575945740.000000
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R8
+nget@score@cpu_vlg_vec_tst
+vsquareRender
+Z11 !s110 1575930778
+!i10b 1
+!s100 OFBoCifgcJ0@kHdNgi=WO1
+ICf8;NN8IB^hLiodEa5N?;2
+R1
+R0
+w1575930769
+R2
+R3
+R4
+R5
+r1
+!s85 0
+31
+!s108 1575930776.000000
+R6
+R7
+!i113 1
+R8
+nsquare@render
+vsquareRender_vlg_vec_tst
+R11
+!i10b 1
+!s100 Z30o@bM]:Do=XZ1:inmW^3
+I[44J8bD37kjGZC<;WK]hG1
+R1
+R0
+w1575930766
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R9
+R5
+r1
+!s85 0
+31
+!s108 1575930778.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R8
+nsquare@render_vlg_vec_tst

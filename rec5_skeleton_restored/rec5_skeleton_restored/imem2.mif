@@ -1,0 +1,48 @@
+-- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, the Altera Quartus Prime License Agreement,
+-- the Altera MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Altera and sold by Altera or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=4096;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0     :   00101000100000000000000000000101;
+	1     :   00000000110000100010000000000100;
+	2     :   00101001000001000000000000000011;
+	3     :   00000000000000000000000000000000;
+	4     :   01000001010010000000000000000000;
+	5     :   00001000000000000000000000001010;
+	[6..9]  :   00000000000000000000000000000000;
+	10    :   00111000110001000000000000000000;
+	11    :   01000001100000000000000000000101;
+	12    :   00011000000000000000000000010100;
+	13    :   00101001110000000000000000000001;
+	14    :   00000001100011100000111110010000;
+	15    :   00000001010011000111000000000100;
+	16    :   00101001010011011111111111111111;
+	17    :   10101000000000000000000000001010;
+	18    :   10110000000000000000000000100011;
+	19    :   00000000000000000000000000000000;
+	20    :   00010010100000000000000000001010;
+	21    :   00101001110000000000000000000101;
+	22    :   00010001110000000000000000001010;
+	[23..32]  :   00000000000000000000000000000000;
+	33    :   00100111110000000000000000000000;
+	[34..4095]  :   00000000000000000000000000000000;
+END;

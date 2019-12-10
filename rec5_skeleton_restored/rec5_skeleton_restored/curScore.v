@@ -7,9 +7,11 @@ module curScore(
    reg [9:0]Digit2;
    reg [9:0]Digit3;
  
- parameter [9:0]step3 = 0;
- parameter [9:0]step2 = 4;
- parameter [9:0]step1 = 8;
+ parameter [9:0]offsetR = 80;//5rows
+ parameter [9:0]offsetC = 2;//2cols
+ parameter [9:0]step3 = 0 + offsetR + offsetC;
+ parameter [9:0]step2 = 4 + offsetR + offsetC;
+ parameter [9:0]step1 = 8 + offsetR + offsetC;
  
   
  always@(clk) begin

@@ -22,7 +22,7 @@ module printScore(
  //unit size, width is w, height is h
  parameter [9:0] w = 10;
  parameter [9:0] h = 10;
- parameter [7:0] colorIndex = 8'haa;
+ parameter [7:0] colorIndex = 8'h00; //white
  
  
 // module curScore(
@@ -35,10 +35,12 @@ module printScore(
  
  always@(posedge clk) begin
   if((scoreIdx[k] == 1'b1) && j >= 480) begin
-   qout = colorIndex;
+   qout = colorIndex;	//white
   end
   else begin
-   qout = qin;
+//   qout = qin;
+		qout = 8'h03;
+		
   end
  end
  

@@ -1,0 +1,30 @@
+module getScoreCPU(
+ input clk,
+ input reset,
+ input [3:0] var,
+ output [9:0]score
+);
+ 
+ reg[9:0] oldScore = 10'b0;
+ wire[9:0] newScore = 10'b0;
+
+//module cpu(clock, reset, var, oldScore, newScore);
+//input clock, reset;
+//input[3:0] var;
+//input [9:0] oldScore;
+//output [9:0] newScore;
+ cpu cscore1(clk, reset, var, oldScore, newScore);
+
+ always@(posedge clk or posedge reset) begin
+  if(reset)begin
+   oldScore = 10'b0;
+  end
+  
+  if(var)begin
+   oldScore = newScore;
+  end
+   end
+  
+  assign score = oldScore;
+
+endmodule

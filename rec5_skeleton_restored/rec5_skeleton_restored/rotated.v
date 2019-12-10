@@ -4,12 +4,16 @@ module rotated(
 	input [143:0] backGround,
 	input [143:0] currentSqs,
 	output [143:0] newSqs,
-	output canRotate
+	output canRotate,
+		input [10:0] offsetX,
+	input [10:0] offsetY,
+	output [10:0] rx,
+	output [10:0] ry
 );
-	wire [10:0] rx;
-	wire [10:0] ry;
-	wire [10:0] offsetX;
-	wire [10:0] offsetY;
+//	wire [10:0] rx;
+//	wire [10:0] ry;
+//	wire [10:0] offsetX;
+//	wire [10:0] offsetY;
 //	wire [4:0] x [143:0];
 //	wire [4:0] y [143:0];
 //	wire [4:0] newX [143:0];
@@ -66,7 +70,7 @@ for (i = 0; i < 144; i = i + 1) begin: for1
 //	 assign newSqs[i] = inBoard_next_xy[i / 12][i % 12];
 
 //	 assign  newSqs[i] = (((i/12 + offsetX) >= 0) && ((i/12 + offsetX) < 12) && ((i%12 + offsetY) >= 0) && ((i%12 + offsetY) < 12)) ? inBoard_xy[i/12 + offsetX][i%12 + offsetY] : 1'b0;
-		assign  newSqs[i] = ((i/12 + ry >= rx) && (i/12 + ry  < 12 + rx) && (i%12 + 11 >= rx + ry) && (i%12 + 11  < 12 + rx + ry)) ? inBoard_xy[i/12 + ry - rx][i%12 + 11 - rx - ry] : 1'b0;
+		assign  newSqs[i] = ((i/12 + ry >= rx) && (i/12 + ry  < 12 + rx) && (i%12 + 11 >= rx + ry) && (i%12 + 11  < 12 + rx + ry)) ? inBoard_xy[i/12 + offsetX][i%12 + offsetY] : 1'b0;
 
 		//	 always@(posedge clk) begin
 //		signals[i] =  (i/12 + offsetX < 0 || i/12 + offsetX >= 144 || i%12 + offsetY < 0 || i%12 + offsetY >= 144);
@@ -75,8 +79,8 @@ end
 endgenerate
 
 	assign canRotate = signals == 145'b0;
-	assign offsetY = 11 - rx - ry;	//coor should left shift by
-	assign offsetX = ry - rx; // should move up by
+//	assign offsetY = 11 - rx - ry;	//coor should left shift by
+//	assign offsetX = ry - rx; // should move up by
 //assign newSqs = inBoard_next;
 
 endmodule

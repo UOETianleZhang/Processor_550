@@ -1,0 +1,139 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/09/2019 17:40:38"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          curSquares
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module curSquares_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg downSignal;
+reg [144:0] initialBack;
+reg [144:0] initialSquare;
+reg leftSignal;
+reg rightSignal;
+reg [9:0] scoreToPrint;
+reg upSignal;
+// wires                                               
+wire [144:0] background_out;
+wire [144:0] movingSquares;
+wire [9:0] myScore_out;
+wire [9:0] toAdd_out;
+
+// assign statements (if any)                          
+curSquares i1 (
+// port map - connection between master ports and signals/registers   
+	.background_out(background_out),
+	.clk(clk),
+	.downSignal(downSignal),
+	.initialBack(initialBack),
+	.initialSquare(initialSquare),
+	.leftSignal(leftSignal),
+	.movingSquares(movingSquares),
+	.myScore_out(myScore_out),
+	.rightSignal(rightSignal),
+	.scoreToPrint(scoreToPrint),
+	.toAdd_out(toAdd_out),
+	.upSignal(upSignal)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #100 1'b1;
+	#100;
+end 
+// scoreToPrint[ 9 ]
+initial
+begin
+	scoreToPrint[9] = 1'b0;
+end 
+// scoreToPrint[ 8 ]
+initial
+begin
+	scoreToPrint[8] = 1'b0;
+end 
+// scoreToPrint[ 7 ]
+initial
+begin
+	scoreToPrint[7] = 1'b0;
+end 
+// scoreToPrint[ 6 ]
+initial
+begin
+	scoreToPrint[6] = 1'b0;
+end 
+// scoreToPrint[ 5 ]
+initial
+begin
+	scoreToPrint[5] = 1'b0;
+end 
+// scoreToPrint[ 4 ]
+initial
+begin
+	scoreToPrint[4] = 1'b0;
+	scoreToPrint[4] = #800000 1'b1;
+end 
+// scoreToPrint[ 3 ]
+initial
+begin
+	scoreToPrint[3] = 1'b0;
+	scoreToPrint[3] = #400000 1'b1;
+	scoreToPrint[3] = #400000 1'b0;
+end 
+// scoreToPrint[ 2 ]
+initial
+begin
+	repeat(2)
+	begin
+		scoreToPrint[2] = 1'b0;
+		scoreToPrint[2] = #200000 1'b1;
+		# 200000;
+	end
+	scoreToPrint[2] = 1'b0;
+end 
+// scoreToPrint[ 1 ]
+always
+begin
+	scoreToPrint[1] = 1'b0;
+	scoreToPrint[1] = #100000 1'b1;
+	#100000;
+end 
+// scoreToPrint[ 0 ]
+always
+begin
+	scoreToPrint[0] = 1'b0;
+	scoreToPrint[0] = #50000 1'b1;
+	#50000;
+end 
+endmodule
+
